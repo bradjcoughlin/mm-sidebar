@@ -1,0 +1,126 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.SidebarContainer {
+    background-color: #145dbf;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    width: 220px;
+}
+
+.NavGroup {
+    overflow: hidden;
+}
+
+.NavGroup button.NavGroupToggle {
+    line-height: 44px;
+    font-size: 18px;
+    width: 100%;
+    text-overflow: ellipsis;
+    text-align: left;
+    border: none;
+    color: #BCCDE7;
+    background-color: transparent;
+}
+.NavGroup__is-collapsed {
+    animation-name: menuAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+/* Nav Group Content */
+.NavGroupContent {
+    display: block;
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+    animation-fill-mode: both;
+}
+.NavGroupContent__is-collapsed {
+    display: none;
+}
+.NavGroupContent ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* List items */
+.NavGroupContent__list-item {
+    line-height: 40px;
+    list-style-type: none;
+    width: 216px;
+    border: solid 2px transparent;
+}
+.NavGroupContent__list-item:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.NavGroupContent__list-item > a {
+    text-decoration: none;
+    height: 40px;
+    width: 100%;
+    display: block;
+    color: #BCCDE7;
+    margin-left: 24px;
+}
+.NavGroupContent__list-item > a:hover {
+    color: #BCCDE7;
+}
+.NavGroupContent__list-item.dragging {
+    opacity: 0;
+}
+
+
+.NavGroupContent__list-item-absolute {
+    height: 44px;
+    list-style-type: none;
+    width: 100%;
+    position: relative;
+}
+.NavGroupContent__list-item-absolute:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+.NavGroupContent__list-item-absolute > a {
+    text-decoration: none;
+    position: absolute;
+    line-height: 44px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 24px;
+    color: #BCCDE7;
+}
+.NavGroupContent__list-item-absolute > a:hover {
+    color: #BCCDE7;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0px, -40px, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0px, -40px, 0px);
+    }
+}
