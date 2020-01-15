@@ -22,12 +22,42 @@ function dragEnd(e) {
 // expand/collapse
 let collapseSources = document.querySelectorAll('.NavGroupToggle');
 collapseSources.forEach(collapseSource => {
-    collapseSource.addEventListener("click", collapseExpand);
+    collapseSource.addEventListener("click", collapseExpandAnimated);
 });
 
-function collapseExpand(e) {
+function collapseExpandOld(e) {
     let menu = e.target.parentElement;
     let content = e.target.parentElement.querySelector('#' + e.target.id + '.NavGroupContent');
     content.classList.toggle("NavGroupContent__is-collapsed");
     menu.classList.toggle("NavGroup__is-collapsed")
 }
+
+function collapseExpandAnimated(e) {
+    const boxes = e.target.parentElement.querySelectorAll('#' + e.target.id + '.NavGroupContent .NavGroupContent__list-item');
+    console.log(boxes);
+    boxes.forEach(box => {
+        box.classList.add('animating');
+        box.classList.toggle('collapsed');
+
+        box.addEventListener('transitionend', () => {
+            console.log('ended');
+            box.classList.remove('animating');
+        }, { once: true });
+    });
+    console.log(e.target);
+}
+
+function toggleBox(e) {
+    const boxes = document.querySelectorAll('.box.transform');
+    boxes.forEach(box => {
+        box.classList.toggle('collapsed');
+    });
+    console.log(e.target);
+}
+
+const shrinkButton = document.querySelector('#shrinkButton');
+
+shrinkButton.addEventListener('click', shrinkBox);
+
+const toggleButton = document.querySelector('#toggleButton');
+toggleButton.addEventListener('click', toggleBox);
