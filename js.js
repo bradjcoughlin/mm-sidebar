@@ -35,17 +35,14 @@ function collapseExpandOld(e) {
 
 function collapseExpandAnimated(e) {
     const boxes = e.target.parentElement.querySelectorAll('#' + e.target.id + '.NavGroupContent .NavGroupContent__list-item');
-    console.log(boxes);
     boxes.forEach(box => {
         box.classList.add('animating');
         box.classList.toggle('collapsed');
 
         box.addEventListener('transitionend', () => {
-            console.log('ended');
             box.classList.remove('animating');
         }, { once: true });
     });
-    console.log(e.target);
 }
 
 function toggleBox(e) {
@@ -53,7 +50,6 @@ function toggleBox(e) {
     boxes.forEach(box => {
         box.classList.toggle('collapsed');
     });
-    console.log(e.target);
 }
 
 const shrinkButton = document.querySelector('#shrinkButton');
