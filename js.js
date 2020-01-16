@@ -4,6 +4,7 @@ dragSources.forEach(dragSource => {
     dragSource.addEventListener("dragend", dragEnd);
 });
 
+/* TODO: adding inline styles breaks collapsed styles :( */
 function dragStart(e) {
     this.classList.add("dragging");
     this.style.backgroundColor = '#0d4896';

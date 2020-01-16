@@ -15,6 +15,7 @@ body {
     left: 0;
     position: fixed;
     width: 220px;
+    overflow-y: scroll;
 }
 
 .NavGroup {
@@ -22,8 +23,11 @@ body {
 }
 
 .NavGroup button.NavGroupToggle {
-    line-height: 44px;
-    font-size: 18px;
+    height: 28px;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
     width: 100%;
     text-overflow: ellipsis;
     text-align: left;
@@ -38,18 +42,9 @@ body {
     animation-timing-function: linear;
 }
 
-/* Nav Group Content */
-
+/* Content */
 .NavGroupContent {
-    display: block;
-    animation-name: fadeInDown;
-    animation-duration: 0.5s;
-    animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
-    animation-fill-mode: both;
-}
-
-.NavGroupContent__is-collapsed {
-    display: none;
+    /* empty */
 }
 
 .NavGroupContent ul {
@@ -60,7 +55,8 @@ body {
 /* List items */
 
 .NavGroupContent__list-item {
-    height: 40px;
+    display: block;
+    height: 31px;
     list-style-type: none;
     width: 216px;
     border: solid 2px transparent;
@@ -72,7 +68,7 @@ body {
 }
 
 .NavGroupContent__list-item.animating {
-    transition-property: height, padding, color;
+    transition-property: height, padding, color, border;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
 }
@@ -81,16 +77,18 @@ body {
     height: 0;
     padding-top: 0;
     padding-bottom: 0;
+    border-top: none;
+    border-bottom: none;
     overflow-y: hidden;
 }
 
-.NavGroupContent__list-item>a {
+.NavGroupContent__list-item > a {
+    font-size: 14px;
     text-decoration: none;
-    height: 40px;
+    padding: 5px 5px 5px 15px;
     width: 100%;
     display: block;
     color: #BCCDE7;
-    margin-left: 24px;
 }
 
 .NavGroupContent__list-item>a:hover {
@@ -125,34 +123,4 @@ body {
 
 .NavGroupContent__list-item-absolute > a:hover {
     color: #BCCDE7;
-}
-
-.box {
-    width: 160px;
-    height: 20px;
-    padding: 20px;
-    overflow: hidden;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.box.blue {
-    background-color: DodgerBlue;
-}
-
-.box.light-blue {
-    background: LightSkyBlue;
-}
-
-.box.collapsed {
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    color: DodgerBlue;
-    overflow-y: hidden;
-}
-
-.box.animating {
-    transition-property: height, padding, color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
 }
