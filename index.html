@@ -1,108 +1,111 @@
 <head>
-    <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <!--load all styles -->
     <link href="/styles.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="SidebarContainer">
-        <nav>
-            <div class="NavGroup">
-                <button class="NavGroupToggle" id="group-a">
-                    <i class="fas fa-caret-down"></i>
-                    &nbsp;Channel Group A
-                </button>
-                <div class="NavGroupContent" id="group-a">
-                    <ul role="list">
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-one" draggable="false">
-                                <i class="fas fa-globe"></i>
-                                &nbsp;Channel One
-                            </a>
-                        </li>
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-two" draggable="false">
-                                <i class="fas fa-globe"></i>
-                                &nbsp;Channel Two
-                            </a>
-                        </li>
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-three" draggable="false">
-                                <i class="fas fa-lock"></i>
-                                &nbsp;Channel Three
-                            </a>
-                        </li>
-                    </ul>
+        <div class="scrollbar--view" style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: -8px; margin-bottom: -8px;">
+            <nav>
+                <div class="NavGroup">
+                    <button class="NavGroupToggle" id="group-a">
+                        <i class="fas fa-caret-down"></i>
+                        &nbsp;Channel Group A
+                    </button>
+                    <div class="NavGroupContent" id="group-a">
+                        <ul role="list">
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-one" draggable="false">
+                                    <i class="fas fa-globe"></i>
+                                    &nbsp;Channel One
+                                </a>
+                            </li>
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-two" draggable="false">
+                                    <i class="fas fa-globe"></i>
+                                    &nbsp;Channel Two
+                                </a>
+                            </li>
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-three" draggable="false">
+                                    <i class="fas fa-lock"></i>
+                                    &nbsp;Channel Three
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="NavGroup">
-                <button class="NavGroupToggle" id="group-b">
-                    <i class="fas fa-caret-down"></i>
-                    &nbsp;Channel Group B
-                </button>
-                <div class="NavGroupContent" id="group-b">
-                    <ul role="list">
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-four" draggable="false">
-                                <i class="fas fa-globe"></i>
-                                &nbsp;Channel Four
-                            </a>
-                        </li>
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-five" draggable="false">
-                                <i class="fas fa-globe"></i>
-                                &nbsp;Channel Five
-                            </a>
-                        </li>
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-six" draggable="false">
-                                <i class="fas fa-lock"></i>
-                                &nbsp;Channel Six
-                            </a>
-                        </li>
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-seven" draggable="false">
-                                <i class="fas fa-lock"></i>
-                                &nbsp;Channel Seven
-                            </a>
-                        </li>
-                    </ul>
+                <div class="NavGroup">
+                    <button class="NavGroupToggle" id="group-b">
+                        <i class="fas fa-caret-down"></i>
+                        &nbsp;Channel Group B
+                    </button>
+                    <div class="NavGroupContent" id="group-b">
+                        <ul role="list">
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-four" draggable="false">
+                                    <i class="fas fa-globe"></i>
+                                    &nbsp;Channel Four
+                                </a>
+                            </li>
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-five" draggable="false">
+                                    <i class="fas fa-globe"></i>
+                                    &nbsp;Channel Five
+                                </a>
+                            </li>
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-six" draggable="false">
+                                    <i class="fas fa-lock"></i>
+                                    &nbsp;Channel Six
+                                </a>
+                            </li>
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-seven" draggable="false">
+                                    <i class="fas fa-lock"></i>
+                                    &nbsp;Channel Seven
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="NavGroup">
-                <button class="NavGroupToggle" id="group-b">
-                    <i class="fas fa-caret-down"></i>
-                    &nbsp;Channel Group C
-                </button>
-                <div class="NavGroupContent" id="group-b">
-                    <ul role="list">
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-eight" draggable="false">
-                                <i class="fas fa-globe"></i>
-                                &nbsp;Channel Eight
-                            </a>
-                        </li>
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-nine" draggable="false">
-                                <i class="fas fa-globe"></i>
-                                &nbsp;Channel Nine
-                            </a>
-                        </li>
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-ten" draggable="false">
-                                <i class="fas fa-lock"></i>
-                                &nbsp;Channel Ten
-                            </a>
-                        </li>
-                        <li role="listitem" draggable="true" class="NavGroupContent__list-item">
-                            <a href="#channel-eleven" draggable="false">
-                                <i class="fas fa-lock"></i>
-                                &nbsp;Channel Eleven
-                            </a>
-                        </li>
-                    </ul>
+                <div class="NavGroup">
+                    <button class="NavGroupToggle" id="group-b">
+                        <i class="fas fa-caret-down"></i>
+                        &nbsp;Channel Group C
+                    </button>
+                    <div class="NavGroupContent" id="group-b">
+                        <ul role="list">
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-eight" draggable="false">
+                                    <i class="fas fa-globe"></i>
+                                    &nbsp;Channel Eight
+                                </a>
+                            </li>
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-nine" draggable="false">
+                                    <i class="fas fa-globe"></i>
+                                    &nbsp;Channel Nine
+                                </a>
+                            </li>
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-ten" draggable="false">
+                                    <i class="fas fa-lock"></i>
+                                    &nbsp;Channel Ten
+                                </a>
+                            </li>
+                            <li role="listitem" draggable="true" class="NavGroupContent__list-item">
+                                <a href="#channel-eleven" draggable="false">
+                                    <i class="fas fa-lock"></i>
+                                    &nbsp;Channel Eleven
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div><!-- /.scrollbar--view -->
     </div>
     <script src="/js.js"></script>
 </body>

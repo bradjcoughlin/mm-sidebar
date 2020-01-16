@@ -15,7 +15,6 @@ body {
     left: 0;
     position: fixed;
     width: 220px;
-    overflow-y: scroll;
 }
 
 .NavGroup {
@@ -123,4 +122,22 @@ body {
 
 .NavGroupContent__list-item-absolute > a:hover {
     color: #BCCDE7;
+}
+
+.scrollbar--view {
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    height: 8px; /* for horizontal scrollbars */
+    width: 8px;  /* for vertical scrollbars */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .2);
 }
