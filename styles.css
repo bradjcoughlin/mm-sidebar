@@ -9,13 +9,30 @@ body {
 
 .SidebarContainer {
     background-color: #145dbf;
+    width: 220px;
     display: flex;
     flex-direction: column;
     height: 100%;
-    left: 0;
+    position: fixed;
+    left: 65px;
+}
+
+#lhsHeader {
     position: absolute;
-    overflow: hidden;
+    top: 0;
+    display: block;
+    min-height: 63px;
     width: 220px;
+    background-color: purple;
+}
+
+#lhsList {
+    position: absolute;
+    top: 63px;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    overflow-y: scroll;
 }
 
 .NavGroup {
@@ -59,17 +76,18 @@ body {
     height: 31px;
     list-style-type: none;
     width: 216px;
-    border: solid 2px transparent;
+    /* border: solid 2px transparent; */
     overflow: hidden;
+    color: #BCCDE7;
 }
 
 .NavGroupContent__list-item:hover {
-    background: rgba(255, 255, 255, 0.16);
+    /* background: rgba(255, 255, 255, 0.16); */
 }
 
 .NavGroupContent__list-item.animating {
-    transition-property: height, padding, color, border;
-    transition-duration: 0.3s;
+    transition-property: height, padding, color;
+    transition-duration: .3s;
     transition-timing-function: ease-out;
 }
 
@@ -82,6 +100,16 @@ body {
     overflow-y: hidden;
 }
 
+.NavGroupContent__list-item.animating a {
+    transition-property: color;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+
+.NavGroupContent__list-item.collapsed a {
+    color: #145dbf;
+}
+
 .NavGroupContent__list-item > a {
     font-size: 14px;
     text-decoration: none;
@@ -91,7 +119,7 @@ body {
     color: #BCCDE7;
 }
 
-.NavGroupContent__list-item>a:hover {
+.NavGroupContent__list-item > a:hover {
     color: #BCCDE7;
 }
 
@@ -123,30 +151,4 @@ body {
 
 .NavGroupContent__list-item-absolute > a:hover {
     color: #BCCDE7;
-}
-
-.scrollbar--view {
-    -ms-overflow-style: none;
-    -webkit-overflow-scrolling: touch;
-}
-
-::-webkit-scrollbar {
-    height: 8px; /* for horizontal scrollbars */
-    width: 8px;  /* for vertical scrollbars */
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, .1);
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: rgba(0, 0, 0, .2);
-}
-
-.nav-pills__container {
-    -webkit-overflow-scrolling: touch;
-    overflow: auto;
-    position: relative;
-    width: 100%;
 }
