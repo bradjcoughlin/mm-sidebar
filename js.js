@@ -4,15 +4,11 @@ collapseSources.forEach(collapseSource => {
     collapseSource.addEventListener("click", collapseExpandAnimated);
 });
 
-function collapseExpandOld(e) {
-    let menu = e.target.parentElement;
-    let content = e.target.parentElement.querySelector('#' + e.target.id + '.NavGroupContent');
-    content.classList.toggle("NavGroupContent__is-collapsed");
-    menu.classList.toggle("NavGroup__is-collapsed")
-}
-
 function collapseExpandAnimated(e) {
-    const boxes = e.target.parentElement.querySelectorAll('#' + e.target.id + '.NavGroupContent .NavGroupContent__list-item');
+    const icon = e.target.querySelector('i.fas');
+    icon.classList.toggle('fa-rotate-180');
+
+    const boxes = e.target.parentElement.querySelectorAll('#' + e.target.id + '.NavGroupContent .NavGroupContent__list-item:not(.unread)');
     boxes.forEach(box => {
         box.classList.add('animating');
         box.classList.toggle('collapsed');

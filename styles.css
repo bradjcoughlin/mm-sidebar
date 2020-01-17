@@ -7,6 +7,14 @@ body {
     padding: 0;
 }
 
+.TeamSidebar {
+    display: flex;
+    width: 65px;
+    background-color: green;
+    height: 100%;
+    position: fixed;
+}
+
 .SidebarContainer {
     background-color: #145dbf;
     width: 220px;
@@ -119,6 +127,12 @@ body {
 
 .NavGroupContent__list-item > a:hover {
     color: #BCCDE7;
+}
+
+.NavGroupContent__list-item.unread > a,
+.NavGroupContent__list-item.unread > a:hover {
+    font-weight: bold;
+    color: #fff;
 }
 
 .NavGroupContent__list-item.dragging {
