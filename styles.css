@@ -59,6 +59,11 @@ body {
     background-color: transparent;
 }
 
+.NavGroup button.NavGroupToggle:focus {
+    box-shadow: inset 0 0 0 2px orange;
+    outline-style: none;
+}
+
 .NavGroup__is-collapsed {
     animation-name: menuAnimation;
     animation-duration: 0.5s;
@@ -83,7 +88,7 @@ body {
     list-style-type: none;
     width: 220px;
     /* border: solid 2px transparent; */
-    overflow: hidden;
+    /* overflow: hidden; */
     color: #BCCDE7;
 }
 
@@ -123,6 +128,10 @@ body {
     width: 200px;
     display: block;
     color: #BCCDE7;
+}
+.NavGroupContent__list-item > a:focus {
+    box-shadow: inset 0 0 0 2px orange;
+    outline-style: none;
 }
 
 .NavGroupContent__list-item > a:hover {
